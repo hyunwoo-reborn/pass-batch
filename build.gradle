@@ -21,14 +21,19 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	runtimeOnly 'com.h2database:h2'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux' // WebClient
+
+	// mysql
 	runtimeOnly 'mysql:mysql-connector-java'
+
 	// lombok
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	// mapstruct
 	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+	// hibernate-types
+	implementation 'com.vladmihalcea:hibernate-types-52:2.19.2'
 	// test
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
@@ -38,6 +43,8 @@ dependencies {
 	// junit5
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+	// https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+	implementation 'org.apache.commons:commons-lang3:3.12.0'
 
 }
 
