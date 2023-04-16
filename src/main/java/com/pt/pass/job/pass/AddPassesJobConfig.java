@@ -32,6 +32,7 @@ public class AddPassesJobConfig {
     public Step addPassesStep() {
         return this.stepBuilderFactory.get("addPassesStep")
                 .tasklet(addPassesTasklet)
+//                .allowStartIfComplete(true) // COMPLETED 되도 재실행에 포함
                 .build();
     }
 
